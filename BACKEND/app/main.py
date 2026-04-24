@@ -1,6 +1,6 @@
 import os
-from BACKEND import FastAPI, BackgroundTasks, HTTPException, Depends, Query
-from BACKEND.middleware.cors import CORSMiddleware
+from fastapi import FastAPI, BackgroundTasks, HTTPException, Depends, Query
+from fastapi.middleware.cors import CORSMiddleware
 from .schemas import (
     ContentBriefCreate, ContentBrief, ContentUpdate, CommentCreate, ContentStatus,
     DraftCreate, DraftUpdate, ScheduleCreate, PublishRequest, RegenerateRequest,
@@ -13,7 +13,7 @@ import uuid
 from typing import List, Dict, Any, Optional
 from datetime import datetime
 
-from BACKEND.responses import StreamingResponse
+from fastapi.responses import StreamingResponse
 import json
 import asyncio
 

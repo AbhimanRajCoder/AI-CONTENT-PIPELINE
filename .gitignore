@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/  <-- Removed to allow src/lib in Next.js
 lib64/
 parts/
 sdist/
