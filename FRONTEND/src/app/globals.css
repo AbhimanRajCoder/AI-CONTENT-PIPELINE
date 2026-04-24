@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Lucid Minimal Palette */
+    --background: 60 20% 98%; /* #FBFBF9 - Alabaster */
+    --foreground: 198 37% 24%; /* #264653 - Deep Slate */
+
+    --card: 0 0% 100%;
+    --card-foreground: 198 37% 24%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 198 37% 24%;
+
+    --primary: 198 37% 24%; /* #264653 - Deep Slate */
+    --primary-foreground: 60 20% 98%;
+
+    --secondary: 168 58% 39%; /* #2A9D8F - Sage Green */
+    --secondary-foreground: 60 20% 98%;
+
+    --muted: 60 10% 94%;
+    --muted-foreground: 198 20% 45%;
+
+    --accent: 12 76% 61%; /* #E76F51 - Terra Cotta */
+    --accent-foreground: 60 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 198 10% 90%;
+    --input: 198 10% 90%;
+    --ring: 168 58% 39%;
+
+    --radius: 24px; /* Large border radius for cards/sheets */
+  }
+
+  .dark {
+    --background: 198 37% 10%;
+    --foreground: 60 20% 98%;
+    /* ... rest of dark mode if needed ... */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans selection:bg-secondary/20;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+/* Custom UI Polish */
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-soft;
+  }
+  
+  .minimal-shadow {
+    box-shadow: 0 8px 32px rgba(38, 70, 83, 0.08);
+  }
+}
